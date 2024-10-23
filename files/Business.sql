@@ -31,15 +31,15 @@ INSERT INTO T_Categories (CategoryName) VALUES ('Design UX/UI');
 
 -- Insertion des formations dans la table T_Formations
 INSERT INTO T_Formations (Name, Description, DurationDays,  FaceToFace , Price, IdCategory) 
-VALUES ('Formation Java', 'Java SE 8 : Syntaxe & Poo', 5, TRUE, 20, 1);
+VALUES ('Formation Java', 'Java SE 8 : Syntaxe & Poo', 5, TRUE, 20, 1); 
 INSERT INTO T_Formations (Name, Description, DurationDays,  FaceToFace, Price, IdCategory) 
-VALUES ('Formation Java avancé', 'Exceptions, fichiers, Jdbc, thread...', 10, FALSE, 20, 2);
+VALUES ('Formation Java avancé', 'Exceptions, fichiers, Jdbc, thread...', 10, FALSE, 20, 1); 
 INSERT INTO T_Formations (Name, Description, DurationDays,  FaceToFace , Price, IdCategory) 
-VALUES ('Formation Spring', 'Spring Core/Mvc/Security', 3, TRUE, 20, 3);
+VALUES ('Formation Spring', 'Spring Core/Mvc/Security', 3, TRUE, 20, 1); 
 INSERT INTO T_Formations (Name, Description, DurationDays,  FaceToFace , Price, IdCategory) 
-VALUES ('Formation Php frameworks', 'Symphony', 7, FALSE, 15, 4);
+VALUES ('Formation Php frameworks', 'Symphony', 7, FALSE, 15, 1); 
 INSERT INTO T_Formations (Name, Description, DurationDays,  FaceToFace , Price, IdCategory) 
-VALUES ('Formation C#', 'DotNet Core', 7, TRUE, 20, 4);
+VALUES ('Formation C#', 'DotNet Core', 7, TRUE, 20, 1);
 
 -- Sélection des formations par catégorie
 SELECT F.IdFormation, F.Name, F.Description, F.DurationDays, F.FaceToFace, F.Price, C.CategoryName 
