@@ -4,6 +4,7 @@ DROP DATABASE IF EXISTS Business;
 CREATE DATABASE Business;
 
 USE Business;
+SET NAMES 'utf8mb4';
 
 -- Construction de la table des catégories
 CREATE TABLE T_Categories (
