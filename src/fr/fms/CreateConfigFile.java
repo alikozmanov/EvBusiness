@@ -26,17 +26,17 @@ public class CreateConfigFile {
             Properties prop = config("lib/config.properties");
 
             // Connexion à la base de données
-            Class.forName(prop.getProperty("db.driver.class"));
-            String url = prop.getProperty("db.url");
+            Class.forName(prop.getProperty("db.driver.class")); // Charge le driver de la base de données
+            String url = prop.getProperty("db.url"); // Récupère l'url de la base de données depuis les prop
             String login = prop.getProperty("db.login");
             String password = prop.getProperty("db.password");
 
-            try (Connection connection = DriverManager.getConnection(url, login, password)) {
+            try (Connection connection = DriverManager.getConnection(url, login, password)) { // connexion à la base de données avec les paramètres fournis
                 
                 // Affiche toutes les formations
                 System.out.println("\n\033[1m=== TOUTES LES FORMATIONS DISPONIBLES ===\033[0m");
                 List<Formation> allformations = getAllFormations(connection); // Récupère toutes les formations
-                displayFormations(allformations); // Affiche les formation récupérée
+                displayFormations(allformations); 
 
                 // Affiche les formations filtrées par catégorie
                 System.out.println("\n\033[1m=== FORMATIONS FILTRÉES PAR CATÉGORIE ===\033[0m");
@@ -60,7 +60,7 @@ public class CreateConfigFile {
             }
 
         } catch (Exception e) {
-            e.printStackTrace();
+            e.printStackTrace(); 
         }
     }
 
@@ -115,7 +115,7 @@ public class CreateConfigFile {
         List<Formation> formations = new ArrayList<>();
         while (resultSet.next()) {
             formations.add(new Formation(
-                resultSet.getInt("IdFormation"),
+                resultSet.getInt("IdFormation"), // Récupere idFormation
                 resultSet.getString("Name"),
                 resultSet.getString("Description"),
                 resultSet.getInt("DurationDays"),
