@@ -1,6 +1,7 @@
 package fr.fms.entities;
 
 public class Formation {
+	// Les attributs
     private int idFormation;
     private String name;
     private String description;
